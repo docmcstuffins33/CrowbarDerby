@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3ey6nb7btisa"]
+
+[ext_resource type="Texture2D" uid="uid://w8f7ckf32u5m" path="res://Sprites/6_dollar.jpg" id="1_dsx4o"]
+
+[node name="Thing" type="Node2D"]
+
+[node name="Hiya" type="Sprite2D" parent="."]
+scale = Vector2(0.185, 0.185)
+texture = ExtResource("1_dsx4o")
