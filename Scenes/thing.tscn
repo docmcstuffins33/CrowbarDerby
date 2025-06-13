@@ -1,9 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://d3ey6nb7btisa"]
+[gd_scene load_steps=4 format=3 uid="uid://d3ey6nb7btisa"]
 
 [ext_resource type="Texture2D" uid="uid://w8f7ckf32u5m" path="res://Sprites/6_dollar.jpg" id="1_dsx4o"]
+[ext_resource type="Script" uid="uid://do7l1ua5pjuhq" path="res://Scenes/thing.gd" id="1_sbnfi"]
 
-[node name="Thing" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dsx4o"]
+
+[node name="Thing" type="CharacterBody2D"]
+script = ExtResource("1_sbnfi")
 
 [node name="Hiya" type="Sprite2D" parent="."]
+position = Vector2(-3, 0)
 scale = Vector2(0.185, 0.185)
 texture = ExtResource("1_dsx4o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_dsx4o")
