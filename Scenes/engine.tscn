@@ -1,8 +1,14 @@
 [gd_scene load_steps=2 format=3 uid="uid://q1khsp7cpnsi"]
 
-[ext_resource type="PackedScene" uid="uid://d3ey6nb7btisa" path="res://Scenes/thing.tscn" id="1_rd8ra"]
+[ext_resource type="Texture2D" uid="uid://cvnn82aq4a0ha" path="res://Sprites/engine.png" id="1_rd8ra"]
 
-[node name="Engine" type="Node2D"]
+[node name="Engine" type="StaticBody2D"]
 
-[node name="Thing" parent="." instance=ExtResource("1_rd8ra")]
-position = Vector2(462, 262)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.215, 0.215)
+texture = ExtResource("1_rd8ra")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0.726959, 15.6771)
+scale = Vector2(1.003, 0.895833)
+polygon = PackedVector2Array(-119.369, -161.5, -108.402, -148.105, -64.5336, -164.849, 141.848, -158.151, 188.708, -111.267, 197.681, 66.2209, 134.869, 132.081, -156.259, 130.965, -197.136, 98.593, -198.133, -76.6628, -116.378, -144.756, -126.348, -154.802, -209.1, -84.4767, -207.106, 105.291, -157.256, 145.477, 136, 143, 207.651, 69.5698, 197.681, -117.965, 144.839, -168.198, -71.5127, -174.895)

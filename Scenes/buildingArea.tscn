@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccdwga2st2nb2"]
+
+[ext_resource type="PackedScene" uid="uid://q1khsp7cpnsi" path="res://Scenes/engine.tscn" id="1_7ar4x"]
+[ext_resource type="PackedScene" uid="uid://biuof3vy4s666" path="res://Scenes/fuel.tscn" id="2_gedjy"]
+
+[node name="BuildingArea" type="Node2D"]
+
+[node name="Engine" parent="." instance=ExtResource("1_7ar4x")]
+position = Vector2(530, 349)
+
+[node name="Fuel" parent="." instance=ExtResource("2_gedjy")]
+position = Vector2(530, 349)
+
+[node name="Fuel2" parent="." instance=ExtResource("2_gedjy")]
+position = Vector2(626, 399)
