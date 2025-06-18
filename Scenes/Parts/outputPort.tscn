@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqyno3q0aq8g8"]
+
+[ext_resource type="Script" uid="uid://brp537thltef1" path="res://Scenes/Parts/output_port.gd" id="1_b1wu2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wniij"]
+size = Vector2(20, 8)
+
+[node name="OutputPort" type="Area2D"]
+collision_layer = 0
+script = ExtResource("1_b1wu2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wniij")
+debug_color = Color(0.945098, 0.160784, 0.392157, 0.717647)

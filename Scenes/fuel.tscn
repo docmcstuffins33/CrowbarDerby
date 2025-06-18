@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dakh5erxby585" path="res://Sprites/fuel.png" id="1_t1drh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gp1vi"]
-radius = 7.07107
+radius = 5.0
 
 [node name="Fuel" type="RigidBody2D"]
 collision_mask = 7
