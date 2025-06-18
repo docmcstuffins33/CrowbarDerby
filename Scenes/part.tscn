@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bk4ilex7uocoa"]
+
+[ext_resource type="Script" uid="uid://c7ewwufbtur6n" path="res://Scenes/part.gd" id="1_omqa0"]
+[ext_resource type="Texture2D" uid="uid://bqqw2jg4lq1y5" path="res://Sprites/part.png" id="2_gsj5f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gsj5f"]
+radius = 25.0
+
+[node name="Part" type="Area2D"]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_omqa0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_gsj5f")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-27, 27, 29, 27, 31, 5, -1, 4, 1, -27, -24, -26)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_gsj5f")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
