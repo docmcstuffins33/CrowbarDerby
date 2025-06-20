@@ -17,9 +17,8 @@ func _process(delta: float) -> void:
 func _createFuel(pos: Vector2) -> void:
 	var newFuel = fuel.instantiate()
 	newFuel.position = pos
-	add_child(newFuel)
+	$FuelGroup.call_deferred("add_child", newFuel)
 
 
 func _on_timer_timeout() -> void:
-	print("hi")
 	_createFuel(Vector2(get_viewport_rect().size.x/2,get_viewport_rect().size.y/3))
